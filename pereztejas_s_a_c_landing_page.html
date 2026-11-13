@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PÉREZTEJAS S.A.C. | Tradición & Salud en Cada Bocado</title>
+  
+  <!-- Favicon para la pestaña del navegador -->
+  <link rel="icon" type="image/png" href="img/logo_sin_fondo_perestejaz.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            vanilla: {
+              50: '#FAF4EB',
+              100: '#F7EFE5',
+              200: '#EFE1D1',
+              300: '#E2CEB9'
+            },
+            choco: {
+              900: '#1A0D07',
+              850: '#22140D',
+              800: '#2A1810',
+              700: '#4A2C18',
+              600: '#663C1E',
+              500: '#83502A'
+            },
+            gold: {
+              400: '#E6C665',
+              500: '#D4AF37',
+              600: '#C89D54',
+              700: '#A37C35'
+            },
+            berry: {
+              500: '#E63956',
+              600: '#C92A42',
+              700: '#A11B30'
+            },
+            wagreen: '#25D366'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1A0D07;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4A2C18;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    /* SVG Drip background styles */
+    .drip-divider {
+      line-height: 0;
+    }
+    .drip-divider svg {
+      display: block;
+      width: 100%;
+      height: 48px;
+    }
+
+    /* Custom Foil Badge Shimmer */
+    .wrapper-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .wrapper-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 70%
+      );
+      transform: rotate(30deg);
+      animation: shimmerPass 4s infinite linear;
+    }
+    @keyframes shimmerPass {
+      0% { transform: translate(-100%, -100%) rotate(30deg); }
+      100% { transform: translate(100%, 100%) rotate(30deg); }
+    }
+
+    /* Pulse Glow for WhatsApp */
+    .wa-pulse {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      animation: pulseWA 2s infinite;
+    }
+    @keyframes pulseWA {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* Reference Dark Form Input Styling */
+    .dark-form-input {
+      background-color: #221C1A;
+      border: 1px solid #382D28;
+      color: #FFFFFF;
+      transition: all 0.25s ease;
+    }
+    .dark-form-input:focus {
+      border-color: #D4AF37;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    }
+    .dark-form-input::placeholder {
+      color: #7E7069;
+    }
+  </style>
+</head>
+<body class="bg-vanilla-50 text-choco-900 font-sans antialiased selection:bg-gold-500 selection:text-choco-900">
+
+  <!-- ==========================================
+       1. STICKY NAVIGATION BAR
+  =========================================== -->
+  <nav class="sticky top-0 z-40 bg-choco-900/95 backdrop-blur-md border-b border-gold-500/20 text-vanilla-50 shadow-xl transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#inicio" class="flex items-center space-x-3 group">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300 overflow-hidden flex-shrink-0">
+            <div class="w-full h-full bg-choco-900 rounded-full flex items-center justify-center overflow-hidden">
+              <!-- Reemplaza 'tu-logo.png' con la ruta o nombre de tu imagen de logo -->
+              <img src="img/logo_sin_fondo_perestejaz.png" alt="Péreztejas Logo" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div>
+            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-gold-400 block leading-tight">PÉREZTEJAS</span>
+            <span class="text-[10px] sm:text-xs text-vanilla-200 tracking-wide font-light">Tradición & Salud en cada bocado</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+          <a href="#inicio" class="hover:text-gold-400 transition-colors py-1">Inicio</a>
+          <a href="#lineas" class="hover:text-gold-400 transition-colors py-1">Nuestras Líneas</a>
+          <a href="#anatomia" class="hover:text-gold-400 transition-colors py-1">Anatomía & Calidad</a>
+          <a href="#catalogo" class="hover:text-gold-400 transition-colors py-1">Catálogo (14 Sabores)</a>
+          <a href="#respaldo" class="hover:text-gold-400 transition-colors py-1">Corporativos</a>
+          <a href="#contacto" class="hover:text-gold-400 transition-colors py-1">Contacto Directo</a>
+        </div>
+
+        <!-- Action Buttons & Cart Toggle -->
+        <div class="flex items-center space-x-3 sm:space-x-4">
+          <!-- Cart Drawer Button -->
+          <button id="open-cart-btn" onclick="toggleCartModal(true)" class="relative p-2.5 rounded-xl bg-choco-800 hover:bg-choco-700 text-gold-400 border border-gold-500/30 transition-all flex items-center space-x-2">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span class="hidden sm:inline font-semibold text-xs text-vanilla-100" id="nav-cart-total">S/ 0.00</span>
+            <span id="cart-count-badge" class="absolute -top-2 -right-2 bg-berry-600 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
+          </button>
+
+          <!-- WhatsApp Quick CTA -->
+          <a href="https://wa.me/51966711126?text=Hola%20PÉREZTEJAS%2C%20quisiera%20consultar%20por%20sus%20chocotejas%20artesanales." target="_blank" class="hidden sm:flex items-center space-x-2 bg-wagreen hover:bg-emerald-500 text-choco-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg transition-transform hover:scale-105">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pedir por WhatsApp</span>
+          </a>
+
+          <!-- Mobile menu toggle -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-vanilla-200 hover:text-white">
+            <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-choco-850 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-3 text-sm">
+      <a href="#inicio" onclick="toggleMobileMenu()" class="block py-2 text-vanilla-100 hover:text-gold-400 border-b border-choco-700/50">Inicio</a>
+      <a href="#lineas" onclick="toggleMobileMenu()" class="block py-2 text-vanilla-100 hover:text-gold-400 border-b border-choco-700/50">Nuestras Líneas</a>
+      <a href="#anatomia" onclick="toggleMobileMenu()" class="block py-2 text-vanilla-100 hover:text-gold-400 border-b border-choco-700/50">Anatomía & Calidad</a>
+      <a href="#catalogo" onclick="toggleMobileMenu()" class="block py-2 text-vanilla-100 hover:text-gold-400 border-b border-choco-700/50">Catálogo de Sabores</a>
+      <a href="#respaldo" onclick="toggleMobileMenu()" class="block py-2 text-vanilla-100 hover:text-gold-400 border-b border-choco-700/50">Pedidos Corporativos</a>
+      <a href="#contacto" onclick="toggleMobileMenu()" class="block py-2 text-gold-400 font-semibold py-2">Contacto & Cotizaciones</a>
+      <a href="https://wa.me/51999999999?text=Hola%20PÉREZTEJAS%2C%20quisiera%20información." target="_blank" class="flex items-center justify-center space-x-2 bg-wagreen text-choco-900 font-bold py-3 rounded-xl mt-4">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>WhatsApp Directo</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       2. HERO SECTION (INICIO)
+  =========================================== -->
+  <section id="inicio" class="relative bg-gradient-to-b from-choco-900 via-choco-800 to-choco-900 text-vanilla-50 pt-12 pb-24 overflow-hidden">
+    <!-- Subtle Ambient Background Glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Badge -->
+      <div class="flex justify-center mb-6">
+        <div class="inline-flex items-center space-x-2 bg-choco-700/70 border border-gold-500/40 text-gold-400 text-xs sm:text-sm px-4 py-1.5 rounded-full backdrop-blur-sm shadow-md">
+          <i class="fa-solid fa-award text-gold-400"></i>
+          <span>Artesanía Peruana en Cercado de Lima • 98% de Aceptación</span>
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="text-center max-w-4xl mx-auto mb-8">
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-vanilla-50 leading-tight mb-6">
+          El auténtico placer de la chocoteja artesanal: <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 italic">desde el clásico manjar de olla</span> hasta un <span class="text-berry-500 font-sans">70% cacao puro</span> sin azúcar añadida.
+        </h1>
+        <p class="text-base sm:text-lg text-vanilla-200/90 max-w-3xl mx-auto leading-relaxed">
+          En <strong class="text-gold-400 font-semibold">PÉREZTEJAS S.A.C.</strong> unimos la memoria gastronómica peruana con la innovación saludable. 14 recetas exclusivas elaboradas semanalmente en lotes frescos de 400 unidades para entregas en Cercado de Lima e instituciones.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-14">
+        <a href="#catalogo" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-choco-900 font-bold px-8 py-4 rounded-xl shadow-xl shadow-gold-500/20 text-center transition-all hover:scale-105 flex items-center justify-center space-x-2">
+          <i class="fa-solid fa-box-open"></i>
+          <span>Armar mi Caja / Pedido</span>
+        </a>
+        <a href="https://wa.me/51999999999?text=Hola%20PÉREZTEJAS%2C%20deseo%20cotizar%20un%20pedido%20especial." target="_blank" class="w-full sm:w-auto bg-choco-700 hover:bg-choco-600 text-vanilla-50 border border-gold-500/40 font-semibold px-8 py-4 rounded-xl shadow-lg text-center transition-all hover:scale-105 flex items-center justify-center space-x-2">
+          <i class="fa-brands fa-whatsapp text-wagreen text-xl"></i>
+          <span>Cotizar por WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Stats Grid (Data from PDF study) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        
+        <div class="bg-choco-850/80 border border-gold-500/20 p-5 rounded-2xl text-center backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cinzel">10 Sabores</div>
+          <div class="text-xs sm:text-sm text-vanilla-200 mt-1">Línea Tradicional</div>
+          <div class="text-xs text-gold-500 font-bold mt-1">S/ 3.00 c/u</div>
+        </div>
+
+        <div class="bg-choco-850/80 border border-berry-600/40 p-5 rounded-2xl text-center backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-berry-500 font-cinzel">4 Sabores</div>
+          <div class="text-xs sm:text-sm text-vanilla-200 mt-1">70% Cacao Saludable</div>
+          <div class="text-xs text-berry-500 font-bold mt-1">S/ 4.00 c/u</div>
+        </div>
+
+        <div class="bg-choco-850/80 border border-gold-500/20 p-5 rounded-2xl text-center backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cinzel">400 Unid.</div>
+          <div class="text-xs sm:text-sm text-vanilla-200 mt-1">Producción Fresca Semanal</div>
+          <div class="text-xs text-vanilla-300 mt-1">Garantía Artesanal</div>
+        </div>
+
+        <div class="bg-choco-850/80 border border-gold-500/20 p-5 rounded-2xl text-center backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cinzel">B2B & MTC</div>
+          <div class="text-xs sm:text-sm text-vanilla-200 mt-1">Atención Institucional</div>
+          <div class="text-xs text-vanilla-300 mt-1">Cercado de Lima</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Chocolate Drip Divider Bottom -->
+    <div class="absolute bottom-0 left-0 right-0 drip-divider text-vanilla-50">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,50 L1200,120 L0,120 Z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. DUAL PRODUCT LINES & INTERACTIVE CATALOG
+  =========================================== -->
+  <section id="lineas" class="py-16 sm:py-24 bg-vanilla-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-gold-700 font-semibold text-xs sm:text-sm tracking-widest uppercase">Tradición e Innovación Confitera</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-choco-900 mt-2">Nuestras Dos Líneas Emblemáticas</h2>
+        <p class="text-choco-700 mt-3 text-sm sm:text-base">
+          Cada chocoteja es envuelta en papel metálico con su código cromático distintivo de 10 colores para la línea tradicional e identificador especial para la línea saludable.
+        </p>
+      </div>
+
+      <!-- Feature Comparison Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        
+        <!-- Linea Tradicional Card -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gold-500/20 shadow-xl relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-0 right-0 bg-gold-500 text-choco-900 text-xs font-bold px-4 py-1.5 rounded-bl-2xl">
+            S/ 3.00 c/u
+          </div>
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-choco-800 text-gold-400 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-cookie"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-choco-900">Línea Tradicional</h3>
+            </div>
+            <p class="text-choco-700 text-sm mb-6 leading-relaxed">
+              Fina cobertura de chocolate templado con rellenos artesanales cocinados a fuego lento. El sabor clásico de la abuela con toque gourmet peruano.
+            </p>
+            <ul class="space-y-2.5 text-sm text-choco-800 mb-6">
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-check text-gold-600 text-xs"></i>
+                <span>Manjar blanco casero de olla a fuego lento</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-check text-gold-600 text-xs"></i>
+                <span>10 variedades con frutas maceradas, nueces e innovaciones</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-check text-gold-600 text-xs"></i>
+                <span>Papel foil metálico con código cromático (10 colores)</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#catalogo" onclick="filterCatalog('tradicional')" class="w-full py-3 bg-choco-800 hover:bg-choco-700 text-vanilla-50 font-bold rounded-xl text-center text-sm transition-colors">
+            Ver 10 Sabores Tradicionales
+          </a>
+        </div>
+
+        <!-- Linea Saludable Card -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-berry-600/30 shadow-xl relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-0 right-0 bg-berry-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-2xl">
+            S/ 4.00 c/u • Sin Azúcar
+          </div>
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-berry-600 text-white flex items-center justify-center text-xl">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-choco-900">Línea Saludable 70% Cacao</h3>
+                <span class="text-xs text-berry-600 font-semibold">Funcional e Inclusiva</span>
+              </div>
+            </div>
+            <p class="text-choco-700 text-sm mb-6 leading-relaxed">
+              Diseñada para personas fit, diabéticas o que restringen el azúcar refinada. Doble blindaje de 70% Cacao Puro Peruano que sella fruta natural fresca.
+            </p>
+            <ul class="space-y-2.5 text-sm text-choco-800 mb-6">
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-check text-berry-600 text-xs"></i>
+                <span>70% Cacao orgánico sin azúcar refinada</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-check text-berry-600 text-xs"></i>
+                <span>Núcleo de fruta fresca pura (arándano, fresa, frambuesa, plátano)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-check text-berry-600 text-xs"></i>
+                <span>Envoltura dorada especial con doble protección sanitaria</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#catalogo" onclick="filterCatalog('saludable')" class="w-full py-3 bg-berry-600 hover:bg-berry-700 text-white font-bold rounded-xl text-center text-sm transition-colors">
+            Ver 4 Sabores Saludables (70% Cacao)
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CATALOG CONTAINER -->
+      <div id="catalogo" class="pt-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-choco-900">Catálogo Completo (14 Sabores & Presentaciones)</h3>
+            <p class="text-sm text-choco-600">Haz clic en "+ Agregar al pedido" para armar tu caja personalizada.</p>
+          </div>
+
+          <!-- Catalog Filter Tabs -->
+          <div class="flex flex-wrap gap-2">
+            <button onclick="filterCatalog('todos')" id="tab-todos" class="tab-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-choco-900 text-gold-400 transition-all">
+              Todos (14)
+            </button>
+            <button onclick="filterCatalog('tradicional')" id="tab-tradicional" class="tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-vanilla-200 text-choco-800 hover:bg-choco-800 hover:text-white transition-all">
+              Tradicional (S/ 3.00)
+            </button>
+            <button onclick="filterCatalog('saludable')" id="tab-saludable" class="tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-vanilla-200 text-choco-800 hover:bg-berry-600 hover:text-white transition-all">
+              70% Cacao (S/ 4.00)
+            </button>
+            <button onclick="filterCatalog('cajas')" id="tab-cajas" class="tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-vanilla-200 text-choco-800 hover:bg-gold-600 hover:text-white transition-all">
+              Cajas de Regalo
+            </button>
+          </div>
+        </div>
+
+        <!-- Catalog Product Grid -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically filled via JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. INTERACTIVE "ANATOMÍA DE UNA PÉREZTEJA"
+  =========================================== -->
+  <section id="anatomia" class="py-16 sm:py-24 bg-choco-900 text-vanilla-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-gold-400 font-semibold text-xs sm:text-sm tracking-widest uppercase">Especificaciones Técnicas (Sección 1.1.2)</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Anatomía & Calidad de una Pérezteja</h2>
+        <p class="text-vanilla-200 text-sm sm:text-base mt-3">
+          Descubre los 9 puntos técnicos de arquitectura confitera que garantizan el sabor, frescura y textura de nuestras chocotejas.
+        </p>
+
+        <!-- Toggle Line Selector -->
+        <div class="inline-flex p-1.5 bg-choco-800 border border-gold-500/30 rounded-2xl mt-6">
+          <button id="toggle-struct-trad" onclick="switchStructure('tradicional')" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all bg-gold-500 text-choco-900 shadow-md">
+            Estructura Tradicional
+          </button>
+          <button id="toggle-struct-salud" onclick="switchStructure('saludable')" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all text-vanilla-200 hover:text-white">
+            Estructura 70% Cacao Saludable
+          </button>
+        </div>
+      </div>
+
+      <!-- Anatomical Details Grid -->
+      <div id="anatomy-content" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. RESPALDO & MERCADO (B2B & INSTITUCIONAL)
+  =========================================== -->
+  <section id="respaldo" class="py-16 sm:py-20 bg-vanilla-100 border-t border-b border-gold-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-berry-600 font-bold text-xs tracking-widest uppercase">Presencia Institucional & Garantía</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-choco-900 mt-2 mb-4">
+            Confianza respaldada por nuestro público en Cercado de Lima
+          </h2>
+          <p class="text-choco-700 text-sm sm:text-base leading-relaxed mb-6">
+            En <strong>PÉREZTEJAS S.A.C.</strong> hemos desarrollado un canal de suministro continuo para instituciones públicas y privadas en Lima Centro, destacando nuestra presencia como proveedores en la sede principal del <strong>Ministerio de Transportes y Comunicaciones (MTC)</strong>.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-gold-500/20 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-gold-500 text-choco-900 flex items-center justify-center font-bold shrink-0">
+                84%
+              </div>
+              <div>
+                <h4 class="font-bold text-choco-900 text-sm">Preferencia por Ingredientes & Sabor</h4>
+                <p class="text-xs text-choco-700">El 84% de nuestros encuestados en el estudio de mercado nos prefiere por encima de opciones comerciales masivas debido al manjar de olla y chocolate fresco.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-gold-500/20 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-choco-800 text-gold-400 flex items-center justify-center font-bold shrink-0">
+                18%
+              </div>
+              <div>
+                <h4 class="font-bold text-choco-900 text-sm">Ron con Pasas: El sabor estrella</h4>
+                <p class="text-xs text-choco-700">Líder indiscutible en preferencia individual de la línea tradicional, seguido por Pecanas y Lúcuma natural.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-gold-500/20 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-berry-600 text-white flex items-center justify-center font-bold shrink-0">
+                400
+              </div>
+              <div>
+                <h4 class="font-bold text-choco-900 text-sm">Capacidad Semanal Artesanal</h4>
+                <p class="text-xs text-choco-700">Elaboración programada para asegurar el 100% de frescura y crocancia en cada lote institucional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- B2B Box Callout -->
+        <div class="bg-choco-900 text-vanilla-50 rounded-3xl p-8 border border-gold-500/30 shadow-2xl relative">
+          <div class="absolute -top-4 -right-4 bg-gold-500 text-choco-900 font-extrabold text-xs px-4 py-2 rounded-xl uppercase shadow-lg">
+            Atención Corporativa
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-gold-400 mb-3">¿Necesitas Chocotejas para tu Empresa u Evento?</h3>
+          <p class="text-xs sm:text-sm text-vanilla-200 leading-relaxed mb-6">
+            Ofrecemos empaques kraft personalizados con ventana y lazo dorado de 6, 9 y 12 unidades para regalos corporativos, reconocimientos, coffee breaks institucionales y eventos familiares.
+          </p>
+
+          <div class="bg-choco-800 p-4 rounded-2xl border border-choco-700 mb-6 space-y-2 text-xs">
+            <div class="flex justify-between text-vanilla-200">
+              <span>Caja Regalo (9 Unidades - Mix Tradicional)</span>
+              <span class="font-bold text-gold-400">S/ 28.00</span>
+            </div>
+            <div class="flex justify-between text-vanilla-200">
+              <span>Docena Corporativa (12 Unidades - A elección)</span>
+              <span class="font-bold text-gold-400">S/ 36.00</span>
+            </div>
+            <div class="flex justify-between text-vanilla-200">
+              <span>Descuento por más de 5 cajas:</span>
+              <span class="font-bold text-wagreen">10% OFF Adicional</span>
+            </div>
+          </div>
+
+          <a href="#contacto" class="block w-full py-3.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-choco-900 font-bold text-center rounded-xl transition-all shadow-md">
+            Solicitar Cotización Corporativa
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. CUSTOM CONTACT FORM (REFERENCE IMAGE MATCH)
+  =========================================== -->
+  <section id="contacto" class="py-16 sm:py-24 bg-[#121010] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Form Header -->
+      <div class="text-center mb-10">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight">Contacto Directo & Cotizaciones Especiales</h2>
+        <p class="text-xs sm:text-sm text-[#A0938C] mt-3 font-normal">
+          Tu información es confidencial y la usaremos únicamente para coordinar tu pedido o cotización.
+        </p>
+      </div>
+
+      <!-- Main Styled Dark Container replicating image_0a42a6.png -->
+      <div class="bg-[#181311] border border-[#2E2420] rounded-3xl p-6 sm:p-10 shadow-2xl">
+        <form id="pereztejas-contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+          
+          <!-- Row 1: Nombre & Apellido -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="form-nombre" class="block text-sm font-bold text-white mb-2">Nombre</label>
+              <input type="text" id="form-nombre" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl dark-form-input text-sm">
+            </div>
+            <div>
+              <label for="form-apellido" class="block text-sm font-bold text-white mb-2">Apellido</label>
+              <input type="text" id="form-apellido" required placeholder="Tu apellido" class="w-full px-4 py-3 rounded-xl dark-form-input text-sm">
+            </div>
+          </div>
+
+          <!-- Field 2: WhatsApp o Teléfono -->
+          <div>
+            <label for="form-phone" class="block text-sm font-bold text-white mb-1">WhatsApp o Teléfono de contacto</label>
+            <input type="tel" id="form-phone" required placeholder="Ej: 999 999 999" class="w-full px-4 py-3 rounded-xl dark-form-input text-sm">
+            <p class="text-xs text-[#8E8078] mt-1.5 font-normal">
+              Indispensable para confirmarte el stock del lote semanal (400 unidades) y coordinar la entrega en Cercado de Lima o alrededores.
+            </p>
+          </div>
+
+          <!-- Field 3: ¿Para quién es el pedido? -->
+          <div>
+            <label for="form-ocasion" class="block text-sm font-bold text-white mb-1">¿Para quién es el pedido?</label>
+            <input type="text" id="form-ocasion" required placeholder="Ej. Regalo de cumpleaños, consumo personal en oficina, compartir en familia, o evento en el MTC" class="w-full px-4 py-3 rounded-xl dark-form-input text-sm">
+            <p class="text-xs text-[#8E8078] mt-1.5 font-normal">
+              Ej. Consumo personal en oficina, regalo de cumpleaños, compartir en familia, o pedido corporativo/institucional como en el MTC. Cuéntanos la ocasión.
+            </p>
+          </div>
+
+          <!-- Field 4: ¿Qué línea y cantidad te interesa? -->
+          <div>
+            <label for="form-linea-cantidad" class="block text-sm font-bold text-white mb-1">¿Qué línea y cantidad te interesa?</label>
+            <input type="text" id="form-linea-cantidad" required placeholder="Ej: 1 Caja Regalo de 9 unidades (Tradicional) y 2 de 70% Cacao Arándano" class="w-full px-4 py-3 rounded-xl dark-form-input text-sm">
+            <p class="text-xs text-[#8E8078] mt-1.5 font-normal">
+              ¿Prefieres la Línea Tradicional (S/ 3.00), la Línea Saludable 70% Cacao sin azúcar (S/ 4.00) o una combinación en cajas de regalo de 9 o 12 unidades?
+            </p>
+          </div>
+
+          <!-- Field 5: Textarea opcional -->
+          <div>
+            <label for="form-detalles" class="block text-sm font-bold text-white mb-1">¿Algún detalle especial, sabores elegidos o dedicatoria? (opcional)</label>
+            <textarea id="form-detalles" rows="3" placeholder="Indícanos los sabores exactos (ej. 3 Ron con pasas, 2 Pecanas, 2 Arándano 70%, 2 Fresa 70%) o dirección de entrega" class="w-full px-4 py-3 rounded-xl dark-form-input text-sm"></textarea>
+            <p class="text-xs text-[#8E8078] mt-1.5 font-normal">
+              Elige tus sabores favoritos (ron con pasas, pecanas, lúcuma, pistacho, arándano 70%, fresa 70%, etc.), indícanos la dirección o centro laboral de entrega y si deseas tarjeta de dedicatoria.
+            </p>
+          </div>
+
+          <!-- Actions -->
+          <div class="pt-4 flex flex-col sm:flex-row gap-4">
+            <button type="button" onclick="submitToWhatsApp()" class="flex-1 bg-wagreen hover:bg-emerald-500 text-choco-900 font-bold py-4 px-6 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-lg">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Enviar Pedido directo a WhatsApp</span>
+            </button>
+            <button type="submit" class="flex-1 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-choco-900 font-bold py-4 px-6 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-lg">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Registrar Solicitud en Web</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. FOOTER
+  =========================================== -->
+  <footer class="bg-choco-950 text-vanilla-200 border-t border-gold-500/20 py-12 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div>
+          <span class="font-cinzel text-xl font-bold text-gold-400 block mb-2">PÉREZTEJAS S.A.C.</span>
+          <p class="text-xs text-vanilla-300 leading-relaxed">
+            Empresa confitera peruana dedicada a la elaboración artesanal de chocotejas tradicionales y funcionales al 70% cacao.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-3 text-xs uppercase tracking-wider">Ubicación & Cobertura</h4>
+          <p class="text-xs text-vanilla-300 space-y-1">
+            <span>• Cercado de Lima, Perú</span><br>
+            <span>• Envíos institucionales y corporativos</span><br>
+            <span>• Cobertura prioritaria en MTC y zonas aledañas</span>
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-3 text-xs uppercase tracking-wider">Nuestras Líneas</h4>
+          <ul class="text-xs text-vanilla-300 space-y-1">
+            <li>Línea Tradicional (10 Sabores - S/ 3.00)</li>
+            <li>Línea 70% Cacao Saludable (4 Sabores - S/ 4.00)</li>
+            <li>Cajas de Regalo Kraft (6, 9 y 12 unidades)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-3 text-xs uppercase tracking-wider">Contacto Instantáneo</h4>
+          <p class="text-xs text-vanilla-300 mb-2">
+            Central de Pedidos WhatsApp:<br>
+            <strong class="text-gold-400">+51 999 999 999</strong>
+          </p>
+          <span class="inline-block bg-choco-800 text-gold-400 text-[10px] font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+            Lotes frescos cada semana
+          </span>
+        </div>
+
+      </div>
+
+      <div class="border-t border-choco-800 pt-6 text-center text-xs text-vanilla-300">
+        © 2026 PÉREZTEJAS S.A.C. Todos los derechos reservados. Basado en la formulación del Estudio de Mercado.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       8. FLOATING WHATSAPP WIDGET
+  =========================================== -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-3">
+    <!-- Popover message -->
+    <div id="wa-popover" class="bg-white text-choco-900 text-xs p-3.5 rounded-2xl shadow-2xl border border-gold-500/30 max-w-xs transition-all duration-300">
+      <div class="flex items-center justify-between mb-1">
+        <span class="font-bold text-choco-900 text-xs">PÉREZTEJAS En Vivo</span>
+        <button onclick="document.getElementById('wa-popover').remove()" class="text-gray-400 hover:text-black">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <p class="text-choco-700">¡Hola! 🍫 ¿Deseas pedir chocotejas Tradicionales o 70% Cacao sin azúcar?</p>
+    </div>
+
+    <!-- Button -->
+    <a href="https://wa.me/51999999999?text=Hola%20PÉREZTEJAS%2C%20quisiera%20hacer%20un%20pedido." target="_blank" class="w-14 h-14 bg-wagreen text-white rounded-full flex items-center justify-center text-3xl shadow-2xl wa-pulse hover:scale-110 transition-transform">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ==========================================
+       9. SHOPPING CART DRAWER (SLIDE-OVER)
+  =========================================== -->
+  <div id="cart-drawer-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="toggleCartModal(false)"></div>
+  <div id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-choco-900 text-vanilla-50 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col border-l border-gold-500/30 shadow-2xl">
+    
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-choco-800 flex items-center justify-between bg-choco-950">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-basket-shopping text-gold-400 text-lg"></i>
+        <h3 class="font-serif font-bold text-lg text-white">Mi Caja / Pedido</h3>
+      </div>
+      <button onclick="toggleCartModal(false)" class="text-vanilla-200 hover:text-white p-2">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Content / Items -->
+    <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-4">
+      <!-- Items dynamically injected -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-5 border-t border-choco-800 bg-choco-950 space-y-4">
+      <div class="flex justify-between items-center text-sm">
+        <span class="text-vanilla-200">Total acumulado:</span>
+        <span class="font-serif font-extrabold text-xl text-gold-400" id="cart-drawer-total">S/ 0.00</span>
+      </div>
+
+      <button onclick="checkoutCartToWhatsApp()" class="w-full bg-wagreen hover:bg-emerald-500 text-choco-900 font-bold py-3.5 rounded-xl text-center text-sm transition-transform hover:scale-[1.02] flex items-center justify-center space-x-2 shadow-lg">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Enviar Pedido por WhatsApp</span>
+      </button>
+      
+      <button onclick="clearCart()" class="w-full bg-transparent hover:bg-choco-800 text-vanilla-300 text-xs py-2 rounded-lg text-center transition-colors">
+        Vaciar Carrito
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       10. JAVASCRIPT & APPLICATION LOGIC
+  =========================================== -->
+  <script>
+    /* -------------------------------------------------------------
+       DATA: PRODUCTS (14 FLAVORS + 3 PRESENTATIONS)
+    ------------------------------------------------------------- */
+    const PRODUCTS = [
+      // LINEA TRADICIONAL (10)
+      {
+        id: 1,
+        name: "Pecanas",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Bronce",
+        foilColor: "#CD7F32",
+        textColor: "#FFFFFF",
+        desc: "Clásico manjar blanco artesanal con pecanas selectas crocantes.",
+        popular: false
+      },
+      {
+        id: 2,
+        name: "Ron con Pasas",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Morada",
+        foilColor: "#8A2BE2",
+        textColor: "#FFFFFF",
+        desc: "El favorito del público (18% preferencia), pasas maceradas en ron premium.",
+        popular: true
+      },
+      {
+        id: 3,
+        name: "Manjar de Olla",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Cobre",
+        foilColor: "#B87333",
+        textColor: "#FFFFFF",
+        desc: "Receta casera tradicional cocinada pacientemente a fuego lento.",
+        popular: false
+      },
+      {
+        id: 4,
+        name: "Manjar de Lúcuma",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Dorada",
+        foilColor: "#FFD700",
+        textColor: "#2A1810",
+        desc: "Elaborado convirtiendo la fruta fresca en manjar de pulpa natural.",
+        popular: false
+      },
+      {
+        id: 5,
+        name: "Mousse de Maracuyá",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Turquesa",
+        foilColor: "#40E0D0",
+        textColor: "#1A0D07",
+        desc: "Manjar base de maracuyá integrado con delicado y fresco mousse.",
+        popular: false
+      },
+      {
+        id: 6,
+        name: "Crema de Pistacho",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Verde",
+        foilColor: "#2E8B57",
+        textColor: "#FFFFFF",
+        desc: "Fina crema desarrollada mediante riguroso triturado y emulsión artesanal.",
+        popular: false
+      },
+      {
+        id: 7,
+        name: "Almendras",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Azul",
+        foilColor: "#1E90FF",
+        textColor: "#FFFFFF",
+        desc: "Manjar artesanal con almendras tostadas crujientes seleccionadas.",
+        popular: false
+      },
+      {
+        id: 8,
+        name: "Maní",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Roja",
+        foilColor: "#DC143C",
+        textColor: "#FFFFFF",
+        desc: "Manjar clásico suave enriquecido con maní tostado seleccionado.",
+        popular: false
+      },
+      {
+        id: 9,
+        name: "Galleta Oreo",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Plateada",
+        foilColor: "#C0C0C0",
+        textColor: "#1A0D07",
+        desc: "Relleno cremoso repleto de trozos de galleta chocolate Oreo.",
+        popular: false
+      },
+      {
+        id: 10,
+        name: "Chin Chin",
+        category: "tradicional",
+        price: 3.00,
+        foilName: "Envoltura Fucsia",
+        foilColor: "#FF1493",
+        textColor: "#FFFFFF",
+        desc: "Manjar artesanal divertido con grageas crujientes de chocolate a color.",
+        popular: false
+      },
+
+      // LINEA SALUDABLE 70% CACAO (4)
+      {
+        id: 11,
+        name: "Arándano Saludable 70% Cacao",
+        category: "saludable",
+        price: 4.00,
+        foilName: "Envoltura Azul/Dorado",
+        foilColor: "#1034A6",
+        textColor: "#FFFFFF",
+        desc: "Fruto puro antioxidante sellado en doble capa de cacao 70% sin azúcar refinada.",
+        popular: true
+      },
+      {
+        id: 12,
+        name: "Fresa Saludable 70% Cacao",
+        category: "saludable",
+        price: 4.00,
+        foilName: "Envoltura Roja/Dorado",
+        foilColor: "#B22222",
+        textColor: "#FFFFFF",
+        desc: "Corazón de fresa natural fresca envuelto en doble blindaje de cacao al 70%.",
+        popular: false
+      },
+      {
+        id: 13,
+        name: "Frambuesa Saludable 70% Cacao",
+        category: "saludable",
+        price: 4.00,
+        foilName: "Envoltura Fucsia/Dorado",
+        foilColor: "#C71585",
+        textColor: "#FFFFFF",
+        desc: "Frambuesa pura de toque cítrico y contraste de cacao intenso funcional.",
+        popular: false
+      },
+      {
+        id: 14,
+        name: "Plátano Saludable 70% Cacao",
+        category: "saludable",
+        price: 4.00,
+        foilName: "Envoltura Dorada Saludable",
+        foilColor: "#D4AC0D",
+        textColor: "#1A0D07",
+        desc: "Trozos de plátano natural en escudo protector de cacao al 70%.",
+        popular: false
+      },
+
+      // PRESENTACIONES EN CAJA (3)
+      {
+        id: 101,
+        name: "Caja Degustación Mixta (6 un.)",
+        category: "cajas",
+        price: 20.00,
+        foilName: "Empaque Kraft",
+        foilColor: "#C89D54",
+        textColor: "#1A0D07",
+        desc: "Selección equilibrada de 4 chocotejas tradicionales y 2 saludables 70% cacao.",
+        popular: false
+      },
+      {
+        id: 102,
+        name: "Caja Regalo / Institucional (9 un.)",
+        category: "cajas",
+        price: 28.00,
+        foilName: "Kraft con Ventana & Lazo",
+        foilColor: "#A37C35",
+        textColor: "#FFFFFF",
+        desc: "Presentación técnica del boceto oficial con 9 variedades a elección.",
+        popular: true
+      },
+      {
+        id: 103,
+        name: "Docena Corporativa Personalizada (12 un.)",
+        category: "cajas",
+        price: 36.00,
+        foilName: "Caja Regalo Lujo",
+        foilColor: "#4A2C18",
+        textColor: "#FFFFFF",
+        desc: "12 unidades ideales para compromisos corporativos, cumpleaños y regalos especiales.",
+        popular: false
+      }
+    ];
+
+    /* -------------------------------------------------------------
+       DATA: ANATOMY BREAKDOWN (SECTION 1.1.2 TECHNICAL STUDY)
+    ------------------------------------------------------------- */
+    const ANATOMY_DATA = {
+      tradicional: [
+        { num: 1, title: "Cobertura Exterior Templada", desc: "Chocolate de 2-3mm de espesor con la rigidez justa para el quiebre crocante perfecto." },
+        { num: 2, title: "Moldeado de Alta Precisión", desc: "Geometría técnica con paredes uniformes que garantizan contención y estética impecable." },
+        { num: 3, title: "Base de Refuerzo Hermético", desc: "Sellado inferior que evita fugas del relleno de manjar durante el transporte." },
+        { num: 4, title: "Relleno Manjar de Olla", desc: "Cocinados a fuego lento artesanal manteniendo el sabor criollo peruano." },
+        { num: 5, title: "Frutos Secos / Aditivos Selectos", desc: "Pecanas, almendras o galletas tostadas para textura y contraste de sabor." },
+        { num: 6, title: "Centro de Especialidad", desc: "Núcleos cremados como mousse de maracuyá, crema de pistacho o ron macerado." },
+        { num: 7, title: "Papel Aluminio Alimentario", desc: "Protección física de conservación contra la humedad y luz." },
+        { num: 8, title: "Código Cromático (10 Colores)", desc: "10 tonalidades metálicas para identificación inmediata por el consumidor." },
+        { num: 9, title: "Caja Kraft con Ventana", desc: "Empaque ecológico institucional de exhibición limpia y elegante." }
+      ],
+      saludable: [
+        { num: 1, title: "Cobertura 70% Cacao Puro", desc: "Sin azúcares refinados, rica en flavonoides y antioxidantes naturales." },
+        { num: 2, title: "Doble Capa Protectora", desc: "Aislamiento especial para proteger la humedad natural de la fruta fresca interior." },
+        { num: 3, title: "Moldeado Sanitario Cacao", desc: "Formulación cero grasas trans con cacao de origen orgánico peruano." },
+        { num: 4, title: "Base Sellada Antigoteo", desc: "Blindaje estructural que preserva los jugos cítricos o naturales de las frutas." },
+        { num: 5, title: "Núcleo de Fruta Natural Pura", desc: "Selección fresca de arándanos, fresas, frambuesas y plátanos sin almíbar." },
+        { num: 6, title: "Cámara Organoléptica", desc: "Equilibrio térmico que mantiene intacta la textura y acidez de la fruta." },
+        { num: 7, title: "Envoltura Grado Alimentario", desc: "Lámina técnica dorada protectora de altísima pureza para consumo fitness." },
+        { num: 8, title: "Identificador Visual Dorado", desc: "Badge metálico distintivo para diferenciar la línea saludable e inclusiva." },
+        { num: 9, title: "Empaque Eco-Saludable", desc: "Presentación Kraft reciclable diseñada para entidades públicas y privadas." }
+      ]
+    };
+
+    /* -------------------------------------------------------------
+       STATE MANAGEMENT
+    ------------------------------------------------------------- */
+    let cart = [];
+    let currentCatalogFilter = 'todos';
+
+    // On Load Initializer
+    window.onload = function() {
+      renderProducts('todos');
+      switchStructure('tradicional');
+      updateCartUI();
+    };
+
+    /* -------------------------------------------------------------
+       CATALOG FILTER & RENDER
+    ------------------------------------------------------------- */
+    function filterCatalog(filter) {
+      currentCatalogFilter = filter;
+      
+      // Update Tab Styles
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-choco-900', 'text-gold-400', 'active');
+        btn.classList.add('bg-vanilla-200', 'text-choco-800');
+      });
+
+      const activeBtn = document.getElementById(`tab-${filter}`);
+      if(activeBtn) {
+        activeBtn.classList.remove('bg-vanilla-200', 'text-choco-800');
+        activeBtn.classList.add('bg-choco-900', 'text-gold-400', 'active');
+      }
+
+      renderProducts(filter);
+    }
+
+    function renderProducts(filter) {
+      const grid = document.getElementById('products-grid');
+      let filtered = PRODUCTS;
+
+      if(filter !== 'todos') {
+        filtered = PRODUCTS.filter(p => p.category === filter);
+      }
+
+      grid.innerHTML = filtered.map(product => {
+        const isSaludable = product.category === 'saludable';
+        const isCaja = product.category === 'cajas';
+        
+        return `
+          <div class="bg-white rounded-2xl p-5 border ${isSaludable ? 'border-berry-600/30' : (isCaja ? 'border-gold-500/40' : 'border-gold-500/20')} shadow-md hover:shadow-xl transition-all flex flex-col justify-between relative group">
+            
+            ${product.popular ? `
+              <div class="absolute -top-3 left-4 bg-gold-500 text-choco-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                <i class="fa-solid fa-star text-[9px] mr-1"></i> Favorito
+              </div>
+            ` : ''}
+
+            <div>
+              <!-- Foil Color Badge -->
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-lg text-xs font-bold wrapper-shimmer shadow-sm" style="background-color: ${product.foilColor}; color: ${product.textColor}">
+                  <span class="w-2 h-2 rounded-full bg-white/70"></span>
+                  <span>${product.foilName}</span>
+                </span>
+                <span class="text-xs font-bold text-choco-600">
+                  ${isCaja ? 'Empaque Especial' : (isSaludable ? '70% Cacao' : 'Tradicional')}
+                </span>
+              </div>
+
+              <!-- Title & Desc -->
+              <h4 class="font-serif text-xl font-bold text-choco-900 mb-1.5 group-hover:text-gold-700 transition-colors">
+                ${product.name}
+              </h4>
+              <p class="text-xs text-choco-700 leading-relaxed mb-4">
+                ${product.desc}
+              </p>
+            </div>
+
+            <!-- Bottom Price & CTA -->
+            <div class="pt-3 border-t border-vanilla-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-choco-500 font-semibold block">Precio unit.</span>
+                <span class="font-serif font-extrabold text-lg text-choco-900">S/ ${product.price.toFixed(2)}</span>
+              </div>
+
+              <button onclick="addToCart(${product.id})" class="px-4 py-2 bg-choco-800 hover:bg-choco-700 text-gold-400 font-bold text-xs rounded-xl transition-transform active:scale-95 flex items-center space-x-1.5">
+                <i class="fa-solid fa-plus"></i>
+                <span>Agregar</span>
+              </button>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* -------------------------------------------------------------
+       ANATOMY TOGGLE LOGIC
+    ------------------------------------------------------------- */
+    function switchStructure(type) {
+      const tradBtn = document.getElementById('toggle-struct-trad');
+      const saludBtn = document.getElementById('toggle-struct-salud');
+      const container = document.getElementById('anatomy-content');
+
+      if(type === 'tradicional') {
+        tradBtn.className = "px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all bg-gold-500 text-choco-900 shadow-md";
+        saludBtn.className = "px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all text-vanilla-200 hover:text-white";
+      } else {
+        saludBtn.className = "px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all bg-berry-600 text-white shadow-md";
+        tradBtn.className = "px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all text-vanilla-200 hover:text-white";
+      }
+
+      const items = ANATOMY_DATA[type];
+      container.innerHTML = items.map(item => `
+        <div class="bg-choco-800/70 border border-gold-500/20 p-5 rounded-2xl hover:border-gold-500/50 transition-all">
+          <div class="flex items-center space-x-3 mb-2">
+            <div class="w-7 h-7 rounded-full ${type === 'tradicional' ? 'bg-gold-500 text-choco-900' : 'bg-berry-600 text-white'} font-bold flex items-center justify-center text-xs">
+              ${item.num}
+            </div>
+            <h4 class="font-bold text-white text-sm sm:text-base">${item.title}</h4>
+          </div>
+          <p class="text-xs text-vanilla-200 leading-relaxed">
+            ${item.desc}
+          </p>
+        </div>
+      `).join('');
+    }
+
+    /* -------------------------------------------------------------
+       SHOPPING CART FUNCTIONS
+    ------------------------------------------------------------- */
+    function addToCart(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if(!product) return;
+
+      const existing = cart.find(item => item.id === productId);
+      if(existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+
+      updateCartUI();
+      showToast(`Agregado: ${product.name}`);
+    }
+
+    function updateQuantity(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if(!item) return;
+
+      item.qty += delta;
+      if(item.qty <= 0) {
+        cart = cart.filter(i => i.id !== productId);
+      }
+
+      updateCartUI();
+    }
+
+    function clearCart() {
+      cart = [];
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, i) => sum + i.qty, 0);
+      const totalPrice = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+      // Badge Count & Nav total
+      document.getElementById('cart-count-badge').innerText = totalCount;
+      document.getElementById('nav-cart-total').innerText = `S/ ${totalPrice.toFixed(2)}`;
+      document.getElementById('cart-drawer-total').innerText = `S/ ${totalPrice.toFixed(2)}`;
+
+      // Render items in Drawer
+      const container = document.getElementById('cart-items-container');
+      if(cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-vanilla-300">
+            <i class="fa-solid fa-basket-shopping text-4xl mb-3 text-choco-700"></i>
+            <p class="text-sm font-semibold">Tu caja de chocotejas está vacía.</p>
+            <p class="text-xs mt-1 text-vanilla-300">Explora el catálogo y agrega tus sabores favoritos.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map(item => `
+        <div class="bg-choco-800 p-3.5 rounded-xl border border-choco-700 flex items-center justify-between">
+          <div>
+            <div class="font-bold text-sm text-white">${item.name}</div>
+            <div class="text-xs text-gold-400">S/ ${(item.price * item.qty).toFixed(2)}</div>
+          </div>
+          
+          <div class="flex items-center space-x-2 bg-choco-900 px-2 py-1 rounded-lg border border-choco-700">
+            <button onclick="updateQuantity(${item.id}, -1)" class="text-vanilla-200 hover:text-white px-1.5 py-0.5 text-xs font-bold">-</button>
+            <span class="text-xs font-bold text-white px-1">${item.qty}</span>
+            <button onclick="updateQuantity(${item.id}, 1)" class="text-vanilla-200 hover:text-white px-1.5 py-0.5 text-xs font-bold">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleCartModal(show) {
+      const drawer = document.getElementById('cart-drawer');
+      const overlay = document.getElementById('cart-drawer-overlay');
+
+      if(show) {
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+          overlay.classList.remove('opacity-0');
+          drawer.classList.remove('translate-x-full');
+        }, 10);
+      } else {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0');
+        setTimeout(() => {
+          overlay.classList.add('hidden');
+        }, 300);
+      }
+    }
+
+    function checkoutCartToWhatsApp() {
+      if(cart.length === 0) {
+        alert("Tu carrito está vacío. Agrega algunos sabores antes de realizar el pedido.");
+        return;
+      }
+
+      let text = "¡Hola PÉREZTEJAS S.A.C.! Quisiera realizar un pedido con el siguiente detalle:\n\n";
+      cart.forEach(item => {
+        text += `• ${item.name} (x${item.qty}) - S/ ${(item.price * item.qty).toFixed(2)}\n`;
+      });
+
+      const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+      text += `\n*Total Estimado: S/ ${total.toFixed(2)}*`;
+      text += `\n\nQuedo a la espera de su confirmación de stock del lote semanal y coordinación de entrega en Cercado de Lima.`;
+
+      const encoded = encodeURIComponent(text);
+      window.open(`https://wa.me/51999999999?text=${encoded}`, '_blank');
+    }
+
+    /* -------------------------------------------------------------
+       CUSTOM FORM HANDLERS (EXACT MATCH FOR REFERENCE FORM UI)
+    ------------------------------------------------------------- */
+    function getFormData() {
+      return {
+        nombre: document.getElementById('form-nombre').value,
+        apellido: document.getElementById('form-apellido').value,
+        phone: document.getElementById('form-phone').value,
+        ocasion: document.getElementById('form-ocasion').value,
+        lineaCantidad: document.getElementById('form-linea-cantidad').value,
+        detalles: document.getElementById('form-detalles').value
+      };
+    }
+
+    function submitToWhatsApp() {
+      const data = getFormData();
+      if(!data.nombre || !data.phone) {
+        alert("Por favor completa al menos tu nombre y teléfono/WhatsApp de contacto.");
+        return;
+      }
+
+      let msg = `*SOLICITUD DE PEDIDO - PÉREZTEJAS S.A.C.*\n`;
+      msg += `--------------------------------------\n`;
+      msg += `• *Cliente:* ${data.nombre} ${data.apellido}\n`;
+      msg += `• *Contacto:* ${data.phone}\n`;
+      msg += `• *Ocasión / Destino:* ${data.ocasion}\n`;
+      msg += `• *Línea y Cantidad:* ${data.lineaCantidad}\n`;
+      if(data.detalles) {
+        msg += `• *Detalles / Sabores:* ${data.detalles}\n`;
+      }
+
+      if(cart.length > 0) {
+        msg += `\n*Items seleccionados en Carrito Web:*\n`;
+        cart.forEach(i => {
+          msg += `  - ${i.name} (x${i.qty})\n`;
+        });
+      }
+
+      const encoded = encodeURIComponent(msg);
+      window.open(`https://wa.me/51999999999?text=${encoded}`, '_blank');
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const data = getFormData();
+      
+      alert(`¡Muchas gracias ${data.nombre}! Tu solicitud ha sido registrada en el sistema de PÉREZTEJAS S.A.C. Nos comunicaremos al número ${data.phone} para confirmar la entrega del lote semanal.`);
+      document.getElementById('pereztejas-contact-form').reset();
+    }
+
+    /* -------------------------------------------------------------
+       MOBILE MENU & TOAST UTILS
+    ------------------------------------------------------------- */
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'fixed top-24 right-6 bg-choco-900 border border-gold-500/50 text-gold-400 font-bold px-4 py-3 rounded-xl shadow-2xl z-50 text-xs flex items-center space-x-2 animate-bounce';
+      toast.innerHTML = `<i class="fa-solid fa-circle-check text-wagreen"></i> <span>${message}</span>`;
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.remove();
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>
